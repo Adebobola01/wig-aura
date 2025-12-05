@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="mt-20 border-t border-solid border-t-[#493f22] pt-10 pb-8">
@@ -12,7 +10,7 @@ const Footer = () => {
             Get exclusive offers, new arrivals, and styling tips sent directly
             to your inbox.
           </p>
-          <form className="flex w-full max-w-sm">
+          <form className="flex w-full mx-40 sm:max-w-sm">
             <input
               className=" w-full p-2 bg-(--surface-dark) border-none text-white placeholder-white/50 rounded-l-lg focus:ring-(--primary)"
               placeholder="Enter your email"
@@ -26,7 +24,7 @@ const Footer = () => {
             </button>
           </form>
         </div>
-        <div className="flex justify-center md:justify-around col-span-1 md:col-span-2 text-center md:text-left">
+        <div className="flex gap-6 justify-center md:justify-around col-span-1 md:col-span-2 text-center md:text-left">
           <div className="flex flex-col space-y-2">
             <h4 className="font-bold text-white mb-2">Shop</h4>
             <a

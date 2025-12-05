@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
           <form className="flex w-full max-w-sm">
             <input
-              className="form-input p-2 flex-grow bg-(--surface-dark) border-none text-white placeholder-white/50 rounded-l-lg focus:ring-(--primary)"
+              className=" w-full p-2 bg-(--surface-dark) border-none text-white placeholder-white/50 rounded-l-lg focus:ring-(--primary)"
               placeholder="Enter your email"
               type="email"
             />

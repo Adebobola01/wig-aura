@@ -14,3 +14,9 @@ body {
   color: var(--foreground);
   font-family: Epilogue, Helvetica, sans-serif;
 }
+
+@media (max-width: 470px) {
+  .search {
+    display: none;
+  }
+}

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${epilogue.className} antialiased px-30 relative pb-20 `}
+        className={`${epilogue.className} antialiased px-6 sm:px-10 xl:px-30 relative pb-10 md:pb-20 `}
       >
         <Navbar />
         {children}

@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="hidden md:flex items-center gap-9">
         <a
           className="text-sm font-medium leading-normal hover:text-(--primary) transition-colors"
-          href="#"
+          href="/shop"
         >
           Shop All
         </a>

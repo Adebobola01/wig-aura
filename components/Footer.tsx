@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="mt-20 border-t border-solid border-t-[#493f22] pt-10 pb-8">
+    <footer className="mt-16 border-t border-solid border-t-[#493f22] pt-10 pb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h3 className="text-white font-bold font-serif text-lg mb-4">
@@ -10,7 +10,7 @@ const Footer = () => {
             Get exclusive offers, new arrivals, and styling tips sent directly
             to your inbox.
           </p>
-          <form className="flex w-full mx-40 sm:max-w-sm">
+          <form className="flex w-full mx-40 sm:mx-0 sm:max-w-sm">
             <input
               className=" w-full p-2 bg-(--surface-dark) border-none text-white placeholder-white/50 rounded-l-lg focus:ring-(--primary)"
               placeholder="Enter your email"

@@ -2,7 +2,7 @@ import React from "react";
 
 const LearnMoreCard = () => {
   return (
-    <section className="bg-(--surface-dark) rounded-xl my-40">
+    <section className="bg-(--surface-dark) rounded-xl my-20">
       <div className="grid md:grid-cols-2 items-center gap-8 md:gap-16 p-8 md:p-12">
         <div className="rounded-lg overflow-hidden">
           <img

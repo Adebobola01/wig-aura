@@ -1,10 +1,29 @@
 "use client";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 
-const Filter = ({ className }: { className?: string }) => {
+const Filter = ({
+  className,
+  mobile,
+  closeHandler,
+}: {
+  className?: string;
+  mobile?: boolean;
+  closeHandler?: () => void;
+}) => {
   return (
-    <aside className="min-w-[190px] lg:w-1/4 xl:w-1/5">
-      <div className="sticky top-[73px] left-0  pt-4">
+    <aside
+      className={`hidden sm:block min-w-[190px] lg:w-1/4 xl:w-1/5 ${className} ${
+        mobile
+          ? "flex! w-full h-dvh justify-center z-100 bg-(--surface-dark)! "
+          : ""
+      } `}
+    >
+      <X className="ml-auto mt-10 cursor-pointer " onClick={closeHandler} />
+      <div
+        className={`${
+          mobile ? "fixed top-40 w-9/10 mx-auto " : "sticky top-[73px] left-0"
+        }   pt-4`}
+      >
         <div className="flex flex-col gap-4">
           <h1 className="text-white text-base font-bold tracking-wider uppercase">
             Filters

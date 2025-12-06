@@ -1,8 +1,10 @@
+"use client";
 import Filter from "@/components/Filter";
 import Pagination from "@/components/Pagination";
 import ShopCard from "@/components/ShopCard";
 import ShopNavbar from "@/components/ShopNavbar";
 import { ChevronDown, FilterIcon } from "lucide-react";
+import { useState } from "react";
 
 type cardType = {
   imgUrl: string;
@@ -122,11 +124,20 @@ const cardsData: cardType[] = [
 ];
 
 const Shop = () => {
+  const [openFilter, setOpenFilter] = useState(false);
+
+  const openFilterHandler = () => {
+    setOpenFilter(!openFilter);
+  };
   return (
     <div className="flex flex-col bg-(--surface-dark) pb-6">
       <ShopNavbar />
       <main className="flex flex-col sm:flex-row gap-6 px-4 relative ">
-        <Filter className="" />
+        <Filter
+          className=""
+          mobile={openFilter}
+          closeHandler={openFilterHandler}
+        />
         <div className="flex flex-col w-full mt-6 ">
           <div className="flex flex-col gap-4 mb-6">
             <div className="flex flex-wrap gap-2">
@@ -163,7 +174,10 @@ const Shop = () => {
                     <ChevronDown />
                   </span>
                 </button>
-                <button className=" flex sm:hidden min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#493f22] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
+                <button
+                  className=" flex sm:hidden min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#493f22] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30"
+                  onClick={openFilterHandler}
+                >
                   <span className="truncate">Filter</span>
                   <span className="material-symbols-outlined text-lg ml-1">
                     <FilterIcon width={16} height={16} />

@@ -2,8 +2,7 @@ import Filter from "@/components/Filter";
 import Pagination from "@/components/Pagination";
 import ShopCard from "@/components/ShopCard";
 import ShopNavbar from "@/components/ShopNavbar";
-import { ChevronDown } from "lucide-react";
-import { it } from "node:test";
+import { ChevronDown, FilterIcon } from "lucide-react";
 
 type cardType = {
   imgUrl: string;
@@ -127,7 +126,7 @@ const Shop = () => {
     <div className="flex flex-col bg-(--surface-dark) pb-6">
       <ShopNavbar />
       <main className="flex flex-col sm:flex-row gap-6 px-4 relative ">
-        <Filter />
+        <Filter className="" />
         <div className="flex flex-col w-full mt-6 ">
           <div className="flex flex-col gap-4 mb-6">
             <div className="flex flex-wrap gap-2">
@@ -157,12 +156,20 @@ const Shop = () => {
               <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
                 Our Wig Collection
               </h1>
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#493f22] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
-                <span className="truncate">Sort by: Newest</span>
-                <span className="material-symbols-outlined text-lg ml-1">
-                  <ChevronDown />
-                </span>
-              </button>
+              <div className="flex gap-2 ">
+                <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#493f22] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
+                  <span className="truncate">Sort by: Newest</span>
+                  <span className="material-symbols-outlined text-lg ml-1">
+                    <ChevronDown />
+                  </span>
+                </button>
+                <button className=" flex sm:hidden min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#493f22] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30">
+                  <span className="truncate">Filter</span>
+                  <span className="material-symbols-outlined text-lg ml-1">
+                    <FilterIcon width={16} height={16} />
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">

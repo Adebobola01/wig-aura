@@ -1,7 +1,7 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 
-const Filter = () => {
+const Filter = ({ className }: { className?: string }) => {
   return (
     <aside className="min-w-[190px] lg:w-1/4 xl:w-1/5">
       <div className="sticky top-[73px] left-0  pt-4">

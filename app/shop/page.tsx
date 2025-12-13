@@ -135,7 +135,7 @@ const Shop = () => {
       <main className="flex flex-col sm:flex-row gap-6 px-4 relative ">
         <Filter
           className=""
-          mobile={openFilter}
+          openMobileFilter={openFilter}
           closeHandler={openFilterHandler}
         />
         <div className="flex flex-col w-full mt-6 ">
